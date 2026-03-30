@@ -8,3 +8,36 @@ __pycache__/
 *.swp
 *.swo
 .DS_Store
+
+# Firmware workspace / unpacked output
+unpack/
+unpacked/
+dump/
+output/
+out/
+release/
+dist/
+temp/
+tmp/
+
+# Rockchip firmware images and package artifacts
+*.img
+*.bin
+*.wic
+*.ext4
+*.sparse
+*.new.dat
+*.new.dat.br
+*.transfer.list
+*.update
+*.fw
+*.rockdev
+parameter.txt
+
+# Compressed firmware drops
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+*.xz
