@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=RK Firmware Studio
+Comment=Rockchip firmware packaging and flashing workbench
+Exec=/home/lv/桌面/RK_Firmware_Studio/run_rkstudio.sh
+Path=/home/lv/桌面/RK_Firmware_Studio
+Terminal=false
+Categories=Development;Utility;
