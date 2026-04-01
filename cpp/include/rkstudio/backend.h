@@ -8,13 +8,9 @@
 #include "rkstudio/paths.h"
 #include "rkstudio/specs.h"
 #include "rkstudio/types.h"
+#include "rkstudio/utils.h"
 
 namespace rkstudio {
-
-class BackendError : public std::runtime_error {
- public:
-  using std::runtime_error::runtime_error;
-};
 
 class StudioBackend {
  public:
@@ -114,7 +110,5 @@ class StudioBackend {
   std::string find_entry(const std::vector<PackageEntry>& entries, const std::string& name) const;
   std::vector<PackProfile> load_pack_profiles() const;
 };
-
-std::string FormatFileSize(std::uint64_t size);
 
 }  // namespace rkstudio

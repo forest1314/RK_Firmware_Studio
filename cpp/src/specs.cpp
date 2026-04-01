@@ -1,32 +1,14 @@
 #include "rkstudio/specs.h"
 
-#include <algorithm>
 #include <cctype>
 #include <stdexcept>
 #include <unordered_map>
 
-#include "rkstudio/backend.h"
+#include "rkstudio/utils.h"
 
 namespace rkstudio {
 
 namespace {
-
-std::string Trim(const std::string& text) {
-  std::size_t start = 0;
-  while (start < text.size() && std::isspace(static_cast<unsigned char>(text[start]))) {
-    ++start;
-  }
-  std::size_t end = text.size();
-  while (end > start && std::isspace(static_cast<unsigned char>(text[end - 1]))) {
-    --end;
-  }
-  return text.substr(start, end - start);
-}
-
-std::string ToLower(std::string text) {
-  std::transform(text.begin(), text.end(), text.begin(), [](unsigned char ch) { return static_cast<char>(std::tolower(ch)); });
-  return text;
-}
 
 std::string RequireText(const StringMap& values, const std::string& key, const std::string& label) {
   const auto iter = values.find(key);
